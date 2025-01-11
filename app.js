@@ -8,8 +8,8 @@ import Inforoute from './routes/call_routes.js'
 const app = express();
 app.use(cors())
 app.use(express.json())
-const PORT = process.env.PORT;
-console.log(PORT);
+const PORT = process.env.PORT || 5000;
+// console.log(PORT);
 await connectDB();
 
 

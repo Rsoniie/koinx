@@ -8,7 +8,7 @@ const Info = async(req, res) =>
     try{
 
     const curr_api_bitcoin = `${process.env.API}/bitcoin`;
-    console.log("This is current api of bitcoin", curr_api_bitcoin);
+    // console.log("This is current api of bitcoin", curr_api_bitcoin);
     const response_bitcoin = await axios.get(curr_api_bitcoin);
     const current_price_bitcoin = response_bitcoin.data.market_data.current_price.usd;
     const market_cap_bitcoin = response_bitcoin.data.market_data.market_cap.usd;
@@ -17,14 +17,14 @@ const Info = async(req, res) =>
 
 
     const curr_api_matic_network = `${process.env.API}/matic-network`;
-    console.log("This is an api of matic_network", curr_api_matic_network);
+    // console.log("This is an api of matic_network", curr_api_matic_network);
     const response_matic_network = await axios.get(curr_api_matic_network);
     const current_price_matic_network = response_matic_network.data.market_data.current_price.usd;
     const market_cap_matic_network = response_matic_network.data.market_data.market_cap.usd;
     const Change24hrpercentage_matic_network = response_matic_network.data.market_data.price_change_percentage_24h;
 
     const curr_api_ethereum = `${process.env.API}/ethereum`;
-    console.log("This is an api of matic_network", curr_api_ethereum);
+    // console.log("This is an api of matic_network", curr_api_ethereum);
     const response_ethereum= await axios.get(curr_api_ethereum);
     const current_price_ethereum = response_ethereum.data.market_data.current_price.usd;
     const market_cap_ethereum = response_ethereum.data.market_data.market_cap.usd;
